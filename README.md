@@ -2,8 +2,13 @@
 Repository for OutsideHacks2015
 <h1> #TODO LIST </h1>
 1) draw the map and drop the pin
+
 2) calculate distance between pin and where you currently are
+
+
 3) offer ability to Uber
+
+
 4) 
 
 <h2> Important links to read about </h2>
