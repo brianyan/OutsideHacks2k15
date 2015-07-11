@@ -16,28 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STd-Tl-uJB">
-                                <rect key="frame" x="0.0" y="564" width="600" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="tRm-ym-ZAD"/>
-                                </constraints>
-                                <state key="normal" title="Button">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rgs-vq-WCw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zae-oz-bZk">
+                                <rect key="frame" x="282" y="550" width="37" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rgs-vq-WCw">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="06I-SV-rqm"/>
-                            <constraint firstItem="STd-Tl-uJB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="1VO-XJ-l2n"/>
-                            <constraint firstAttribute="trailing" secondItem="rgs-vq-WCw" secondAttribute="trailing" id="26F-eS-XzQ"/>
-                            <constraint firstItem="STd-Tl-uJB" firstAttribute="leading" secondItem="rgs-vq-WCw" secondAttribute="leading" id="AAK-Vf-BEg"/>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f3o-z2-0U5"/>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="trailing" secondItem="STd-Tl-uJB" secondAttribute="trailing" id="ikx-2S-78v"/>
-                            <constraint firstItem="STd-Tl-uJB" firstAttribute="top" secondItem="rgs-vq-WCw" secondAttribute="bottom" constant="8" symbolic="YES" id="jgK-Sx-Dtb"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2wK-QN-29J"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Ef-NJ-da6"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="centerX" secondItem="Zae-oz-bZk" secondAttribute="centerX" id="BJD-pe-92r"/>
+                            <constraint firstAttribute="bottom" secondItem="Zae-oz-bZk" secondAttribute="bottom" constant="20" symbolic="YES" id="D4E-RX-jBo"/>
+                            <constraint firstAttribute="trailing" secondItem="rgs-vq-WCw" secondAttribute="trailing" id="ZCj-BM-Var"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="rcg-O9-UL9"/>
                         </constraints>
                     </view>
                     <connections>
