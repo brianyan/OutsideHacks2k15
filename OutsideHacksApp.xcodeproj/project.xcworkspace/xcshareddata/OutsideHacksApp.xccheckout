@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3F428235-0967-4D97-A55B-4D5412C1F9DB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OutsideHacksApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C510625D48AAA39BBB054A9731BA8354C3A20288</key>
+		<string>https://github.com/brianyan/OutsideHacks2k15.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OutsideHacksApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C510625D48AAA39BBB054A9731BA8354C3A20288</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brianyan/OutsideHacks2k15.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C510625D48AAA39BBB054A9731BA8354C3A20288</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C510625D48AAA39BBB054A9731BA8354C3A20288</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OutsideHacks2k15</string>
+		</dict>
+	</array>
+</dict>
+</plist>
