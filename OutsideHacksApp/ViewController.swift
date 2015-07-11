@@ -11,7 +11,10 @@ import MapKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
+    var myCount = true
     @IBOutlet weak var MKView: MKMapView!
+    @IBOutlet weak var Button1: UIButton!
+    
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -31,6 +34,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus){
         MKView.showsUserLocation = (status == .AuthorizedAlways)
+    }
+    
+    @IBAction func DropPin(sender: AnyObject) {
+        if myCount{
+            Button1.setTitle("Clear Pin", forState: UIControlState.Normal)
+            myCount = false
+        }
+        else{
+            Button1.setTitle("Drop Pin", forState: UIControlState.Normal)
+            myCount = true
+        }
     }
     
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
