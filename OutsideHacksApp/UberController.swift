@@ -23,6 +23,8 @@ class UberController: UIViewController{
         "redirect_uris": ["OutsideHacksApp://oauth/callback"],
         "keychain": false
         ])
+    var pickupLocation: CLLocationCoordinate2D!
+    var pinLocation: CLLocationCoordinate2D!
     @IBOutlet weak var distanceLabel: UILabel!
     var length: Double!
     
@@ -34,8 +36,8 @@ class UberController: UIViewController{
     }
     
     @IBAction func UberRequest(sender: AnyObject) {
-        var pickupLocation = MKView.userLocation.location.coordinate
         var uber = Uber(pickupLocation: pickupLocation)
+        uber.dropoffLocation = pinLocation
         uber.deepLink()
     }
     override func didReceiveMemoryWarning() {

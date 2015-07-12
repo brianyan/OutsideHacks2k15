@@ -147,6 +147,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             var uvc: UberController = segue.destinationViewController as! UberController
             println(Distance)
             uvc.length = Distance
+            uvc.pickupLocation = MKView.userLocation.location.coordinate
+            uvc.pinLocation = pointAnnotation.coordinate
         }
     }
 }

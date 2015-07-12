@@ -22,9 +22,9 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>10B73D0B7CE5B1CD363428FDF4A01A2A9E2F0357</key>
-		<string>../../OAuth2/SwiftKeychain/</string>
+		<string>../../OAuth2/SwiftKeychain</string>
 		<key>2045D86BC5D391C299DCC498309E722E037BFF4E</key>
-		<string>../../OAuth2/</string>
+		<string>../../OAuth2</string>
 		<key>C510625D48AAA39BBB054A9731BA8354C3A20288</key>
 		<string>../..</string>
 	</dict>
