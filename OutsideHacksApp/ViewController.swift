@@ -38,7 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     @IBAction func DropPin(sender: AnyObject) {
         if droppedPin{
-            Button1.setTitle("Drop Pin", forState: UIControlState.Normal)
+            Button1.setTitle("Clear Pin", forState: UIControlState.Normal)
             droppedPin = false
             MKView.removeAnnotations(MKView.annotations)
         }
@@ -52,7 +52,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
-    func mapView(theMapView: MKMAPView 
+    func mapView(mapView: MKMapView!, annotationView: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        if control == annotationView.rightCalloutAccessoryView{
+            performSegueWithIdentifier("Detail", sender: self)
+        }
+    }
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView!{
+        
+        if annotation.isKindOfClass(MKUserLocation.self) {
+            return nil
+        }
+        
+        let reuseID = "pin"
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseID) as? MKPinAnnotationView
+        if(pinView == nil){
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+            pinView!.canShowCallout = true
+            pinView!.animatesDrop = true
+            var calloutButton = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
+            pinView!.rightCalloutAccessoryView = calloutButton
+        }
+        else{
+            pinView!.annotation = annotation
+        }
+        return pinView!
+    }
     
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         if let coordinate = MKView.userLocation.location?.coordinate {
