@@ -38,12 +38,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     @IBAction func DropPin(sender: AnyObject) {
         if droppedPin{
-            Button1.setTitle("Clear Pin", forState: UIControlState.Normal)
+            Button1.setTitle("Drop Pin", forState: UIControlState.Normal)
             droppedPin = false
             MKView.removeAnnotations(MKView.annotations)
         }
         else{
-            Button1.setTitle("Drop Pin", forState: UIControlState.Normal)
+            Button1.setTitle("Clear Pin", forState: UIControlState.Normal)
             droppedPin = true
             var pointAnnotation:MKPointAnnotation = MKPointAnnotation()
             pointAnnotation.coordinate = MKView.userLocation.location.coordinate
@@ -52,12 +52,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    func mapView(theMapView: MKMAPView 
+    
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         if let coordinate = MKView.userLocation.location?.coordinate {
             let region = MKCoordinateRegionMakeWithDistance(coordinate, 500, 500)
             MKView.setRegion(region, animated: true)
         }
     }
-
+    
 }
 
