@@ -16,6 +16,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var Button1: UIButton!
     
     let locationManager = CLLocationManager()
+    var currentLocation = Location()
+    var uberProductID = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +54,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
-    func mapView(theMapView: MKMAPView 
-    
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         if let coordinate = MKView.userLocation.location?.coordinate {
             let region = MKCoordinateRegionMakeWithDistance(coordinate, 500, 500)
@@ -61,5 +61,37 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    //Get user's current location
+    func locationManager(manager:CLLocationManager!, didUpdateLocations locations:[AnyObject]!) {
+        var locValue:CLLocationCoordinate2D = manager.location.coordinate
+        currentLocation.latitude = Float(locValue.latitude)
+        currentLocation.longitude = Float(locValue.longitude)
+    }
+    
+    func getUberProducts() {
+        
+        println("Current latitude = \(currentLocation.latitude)")
+        println("Current longitude = \(currentLocation.longitude)")
+        
+        // Get Product IDs from Uber based on current location
+        let uberServerToken = "wUN_PI-fsGxaAHUHlyvQtBvcOKq2g0SnTa6pk-h6"
+        let urlPath = "https://api.uber.com/v1/products?latitude=\(currentLocation.latitude)&longitude=\(currentLocation.longitude)"
+        let url = NSURL(string: urlPath)
+        let session = NSURLSession.sharedSession()
+        var request = NSMutableURLRequest(URL: url!)
+        request.setValue("Token \(uberServerToken)", forHTTPHeaderField: "Authorization")
+        
+        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            
+            if (error != nil) {
+                println(error)
+            }
+            else {
+                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+                self.uberProductID = jsonResult["products"]?[0]["product_id"] as! NSString as String
+            }
+        })
+        task.resume()
+    }
 }
 

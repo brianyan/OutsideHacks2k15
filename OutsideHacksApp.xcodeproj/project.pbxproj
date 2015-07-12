@@ -14,6 +14,7 @@
 		3146CA9A1B51ACD500A03CD6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3146CA981B51ACD500A03CD6 /* LaunchScreen.xib */; };
 		3146CAA61B51ACD500A03CD6 /* OutsideHacksAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3146CAA51B51ACD500A03CD6 /* OutsideHacksAppTests.swift */; };
 		3146CAB01B51B28900A03CD6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3146CAAF1B51B28900A03CD6 /* MapKit.framework */; };
+		8B1250921B520388006F7D8A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1250911B520388006F7D8A /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		3146CAA41B51ACD500A03CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3146CAA51B51ACD500A03CD6 /* OutsideHacksAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsideHacksAppTests.swift; sourceTree = "<group>"; };
 		3146CAAF1B51B28900A03CD6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8B1250911B520388006F7D8A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				3146CA961B51ACD500A03CD6 /* Images.xcassets */,
 				3146CA981B51ACD500A03CD6 /* LaunchScreen.xib */,
 				3146CA8D1B51ACD500A03CD6 /* Supporting Files */,
+				8B1250911B520388006F7D8A /* Location.swift */,
 			);
 			path = OutsideHacksApp;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3146CA921B51ACD500A03CD6 /* ViewController.swift in Sources */,
+				8B1250921B520388006F7D8A /* Location.swift in Sources */,
 				3146CA901B51ACD500A03CD6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
