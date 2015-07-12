@@ -12,8 +12,12 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
     var droppedPin = false
+    var pointAnnotation:MKPointAnnotation = MKPointAnnotation()
+    var Distance = 0.0
+    var centeredFirst = false
     @IBOutlet weak var MKView: MKMapView!
     @IBOutlet weak var Button1: UIButton!
+
     
     let locationManager = CLLocationManager()
     
@@ -37,18 +41,47 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     @IBAction func DropPin(sender: AnyObject) {
+        if(MKView.userLocation.location == nil){
+            return
+        }
         if droppedPin{
-            Button1.setTitle("Clear Pin", forState: UIControlState.Normal)
+            Button1.setTitle("Drop Pin", forState: UIControlState.Normal)
             droppedPin = false
             MKView.removeAnnotations(MKView.annotations)
+            Distance = 0.0
         }
         else{
             Button1.setTitle("Clear Pin", forState: UIControlState.Normal)
             droppedPin = true
-            var pointAnnotation:MKPointAnnotation = MKPointAnnotation()
             pointAnnotation.coordinate = MKView.userLocation.location.coordinate
-            pointAnnotation.title = "Your car"
+            pointAnnotation.title = "Your Car"
             MKView.addAnnotation(pointAnnotation)
+        }
+    }
+    
+    func updateDistance() {
+        if droppedPin{
+            var request = MKDirectionsRequest()
+            var source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2DMake(MKView.userLocation.location.coordinate.latitude, MKView.userLocation.location.coordinate.longitude), addressDictionary: nil))
+            var destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2DMake(pointAnnotation.coordinate.latitude, pointAnnotation.coordinate.longitude), addressDictionary: nil))
+            
+            // source and destination are the relevant MKMapItems
+            request.setSource(source)
+            request.setDestination(destination)
+            
+            // Specify the transportation type
+            request.transportType = MKDirectionsTransportType.Automobile;
+            
+            // If you're open to getting more than one route,
+            // requestsAlternateRoutes = true; else requestsAlternateRoutes = false;
+            request.requestsAlternateRoutes = false
+            
+            var directions = MKDirections(request: request)
+            
+            directions.calculateDirectionsWithCompletionHandler{(response, error) -> Void in
+
+                self.Distance = response.routes.first!.distance
+            }
         }
     }
     
@@ -80,11 +113,33 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
-        if let coordinate = MKView.userLocation.location?.coordinate {
-            let region = MKCoordinateRegionMakeWithDistance(coordinate, 500, 500)
-            MKView.setRegion(region, animated: true)
+        if let coordinate = MKView.userLocation.location?.coordinate{
+            if !centeredFirst{
+                let region = MKCoordinateRegionMakeWithDistance(coordinate, 500, 500)
+                MKView.setRegion(region, animated: true)
+                centeredFirst = true
+            }
+            updateDistance()
+        }
+    }
+    @IBAction func centerOnPin(sender: AnyObject) {
+        if(droppedPin){
+        var pin = MKCoordinateRegionMakeWithDistance(pointAnnotation.coordinate, 500, 500)
+        MKView.setRegion(pin, animated:true)
         }
     }
     
+    @IBAction func centerOnUser(sender: AnyObject) {
+        var userLoc = MKCoordinateRegionMakeWithDistance(MKView.userLocation.location.coordinate, 500, 500)
+        MKView.setRegion(userLoc, animated: true)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "Detail"){
+            var uvc: UberController = segue.destinationViewController as! UberController
+            println(Distance)
+            uvc.length = Distance
+        }
+    }
 }
 

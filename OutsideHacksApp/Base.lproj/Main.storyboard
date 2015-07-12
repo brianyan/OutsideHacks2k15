@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -29,30 +30,53 @@
                                     <action selector="DropPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4w-FP-Jsq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scl-2l-ZQR">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <state key="normal" title="You">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerOnUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKj-Nt-ell"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wn-3i-Cby">
+                                <rect key="frame" x="554" y="20" width="30" height="30"/>
+                                <state key="normal" title="Pin">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerOnPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="01Q-8l-GFN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8m5-UG-G9G"/>
-                            <constraint firstAttribute="bottom" secondItem="Zae-oz-bZk" secondAttribute="bottom" constant="20" symbolic="YES" id="BsJ-8W-hyP"/>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HLZ-ZV-rd1"/>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Q3z-7m-sEi"/>
-                            <constraint firstItem="Zae-oz-bZk" firstAttribute="centerX" secondItem="rgs-vq-WCw" secondAttribute="centerX" id="U5l-rm-0N6"/>
-                            <constraint firstAttribute="trailing" secondItem="rgs-vq-WCw" secondAttribute="trailing" id="ZkJ-Vp-B90"/>
+                            <constraint firstItem="6wn-3i-Cby" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="F3b-hy-Lkj"/>
+                            <constraint firstItem="6wn-3i-Cby" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="J8a-Ar-MUh"/>
+                            <constraint firstItem="6wn-3i-Cby" firstAttribute="baseline" secondItem="Scl-2l-ZQR" secondAttribute="baseline" id="Jez-pE-KL8"/>
+                            <constraint firstItem="Scl-2l-ZQR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Nve-6U-hrJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Zae-oz-bZk" secondAttribute="bottom" constant="20" symbolic="YES" id="VT4-zL-X3s"/>
+                            <constraint firstItem="Zae-oz-bZk" firstAttribute="centerX" secondItem="rgs-vq-WCw" secondAttribute="centerX" id="XFN-Hg-4TK"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b1w-oc-sq7"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jOa-D7-4FA"/>
+                            <constraint firstAttribute="trailing" secondItem="rgs-vq-WCw" secondAttribute="trailing" id="khH-WD-ALu"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="qEH-Xd-eZV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="Button1" destination="Zae-oz-bZk" id="Pkz-2f-jN7"/>
                         <outlet property="MKView" destination="rgs-vq-WCw" id="G85-AE-PXI"/>
+                        <segue destination="qtZ-Ej-VYz" kind="modal" identifier="Detail" id="co8-p4-QbA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-317" y="286"/>
         </scene>
-        <!--View Controller-->
+        <!--Uber Controller-->
         <scene sceneID="eV8-bl-Mfh">
             <objects>
-                <viewController id="qtZ-Ej-VYz" sceneMemberID="viewController">
+                <viewController id="qtZ-Ej-VYz" customClass="UberController" customModule="OutsideHacksApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dx0-QW-Uie"/>
                         <viewControllerLayoutGuide type="bottom" id="3HA-vN-RAm"/>
@@ -60,8 +84,34 @@
                     <view key="view" contentMode="scaleToFill" id="54f-GL-GlV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qZ-FR-4h6">
+                                <rect key="frame" x="300" y="28" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8a-JB-nEh">
+                                <rect key="frame" x="547" y="562" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="qtZ-Ej-VYz" eventType="touchUpInside" id="a8h-UJ-hWP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9qZ-FR-4h6" firstAttribute="top" secondItem="dx0-QW-Uie" secondAttribute="bottom" constant="8" symbolic="YES" id="2rk-NI-bh2"/>
+                            <constraint firstItem="9qZ-FR-4h6" firstAttribute="centerX" secondItem="54f-GL-GlV" secondAttribute="centerX" id="5ih-5u-IG1"/>
+                            <constraint firstItem="b8a-JB-nEh" firstAttribute="trailing" secondItem="54f-GL-GlV" secondAttribute="trailingMargin" id="cL3-vc-UWE"/>
+                            <constraint firstItem="3HA-vN-RAm" firstAttribute="top" secondItem="b8a-JB-nEh" secondAttribute="bottom" constant="8" symbolic="YES" id="yOz-Ek-Yr9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="distanceLabel" destination="9qZ-FR-4h6" id="64I-tD-BqI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0NF-vc-6rU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

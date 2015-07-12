@@ -14,6 +14,7 @@
 		3146CA9A1B51ACD500A03CD6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3146CA981B51ACD500A03CD6 /* LaunchScreen.xib */; };
 		3146CAA61B51ACD500A03CD6 /* OutsideHacksAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3146CAA51B51ACD500A03CD6 /* OutsideHacksAppTests.swift */; };
 		3146CAB01B51B28900A03CD6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3146CAAF1B51B28900A03CD6 /* MapKit.framework */; };
+		31B227CC1B52159500859A30 /* UberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B227CB1B52159500859A30 /* UberController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		3146CAA41B51ACD500A03CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3146CAA51B51ACD500A03CD6 /* OutsideHacksAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsideHacksAppTests.swift; sourceTree = "<group>"; };
 		3146CAAF1B51B28900A03CD6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		31B227CB1B52159500859A30 /* UberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				3146CA8F1B51ACD500A03CD6 /* AppDelegate.swift */,
 				3146CA911B51ACD500A03CD6 /* ViewController.swift */,
 				3146CA931B51ACD500A03CD6 /* Main.storyboard */,
+				31B227CB1B52159500859A30 /* UberController.swift */,
 				3146CA961B51ACD500A03CD6 /* Images.xcassets */,
 				3146CA981B51ACD500A03CD6 /* LaunchScreen.xib */,
 				3146CA8D1B51ACD500A03CD6 /* Supporting Files */,
@@ -223,6 +226,7 @@
 			files = (
 				3146CA921B51ACD500A03CD6 /* ViewController.swift in Sources */,
 				3146CA901B51ACD500A03CD6 /* AppDelegate.swift in Sources */,
+				31B227CC1B52159500859A30 /* UberController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
