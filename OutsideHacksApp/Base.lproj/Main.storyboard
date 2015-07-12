@@ -29,19 +29,31 @@
                                     <action selector="DropPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4w-FP-Jsq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGG-wG-t8x">
+                                <rect key="frame" x="279" y="64" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="syK-ek-Y7i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8m5-UG-G9G"/>
-                            <constraint firstAttribute="bottom" secondItem="Zae-oz-bZk" secondAttribute="bottom" constant="20" symbolic="YES" id="BsJ-8W-hyP"/>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HLZ-ZV-rd1"/>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Q3z-7m-sEi"/>
-                            <constraint firstItem="Zae-oz-bZk" firstAttribute="centerX" secondItem="rgs-vq-WCw" secondAttribute="centerX" id="U5l-rm-0N6"/>
-                            <constraint firstAttribute="trailing" secondItem="rgs-vq-WCw" secondAttribute="trailing" id="ZkJ-Vp-B90"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="292-2Y-ZL5"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="centerX" secondItem="LGG-wG-t8x" secondAttribute="centerX" id="6sV-Va-671"/>
+                            <constraint firstAttribute="bottom" secondItem="Zae-oz-bZk" secondAttribute="bottom" constant="20" symbolic="YES" id="Q0t-io-3Fs"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QAx-tk-Vdc"/>
+                            <constraint firstAttribute="trailing" secondItem="rgs-vq-WCw" secondAttribute="trailing" id="TeY-MC-PCa"/>
+                            <constraint firstItem="Zae-oz-bZk" firstAttribute="centerX" secondItem="LGG-wG-t8x" secondAttribute="centerX" id="UEo-Rm-3Uc"/>
+                            <constraint firstItem="LGG-wG-t8x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="l7r-NB-yeb"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sIr-6H-WrD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="Button1" destination="Zae-oz-bZk" id="Pkz-2f-jN7"/>
+                        <outlet property="Distance" destination="LGG-wG-t8x" id="K2i-Wr-VJU"/>
                         <outlet property="MKView" destination="rgs-vq-WCw" id="G85-AE-PXI"/>
                     </connections>
                 </viewController>
