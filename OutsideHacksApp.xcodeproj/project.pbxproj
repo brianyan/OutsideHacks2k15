@@ -15,6 +15,13 @@
 		3146CAA61B51ACD500A03CD6 /* OutsideHacksAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3146CAA51B51ACD500A03CD6 /* OutsideHacksAppTests.swift */; };
 		3146CAB01B51B28900A03CD6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3146CAAF1B51B28900A03CD6 /* MapKit.framework */; };
 		31B227CC1B52159500859A30 /* UberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B227CB1B52159500859A30 /* UberController.swift */; };
+		31B227F21B52C26B00859A30 /* OAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B227D41B52BA4800859A30 /* OAuth2.framework */; };
+		31B227F31B52C27700859A30 /* OAuth2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31B227D41B52BA4800859A30 /* OAuth2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		31B227F61B52C28C00859A30 /* OAuth2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31B227D61B52BA4800859A30 /* OAuth2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		31B227FA1B52DE3C00859A30 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B227F71B52DE3C00859A30 /* Enum.swift */; };
+		31B227FB1B52DE3C00859A30 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31B227F81B52DE3C00859A30 /* FontAwesome.otf */; };
+		31B227FC1B52DE3C00859A30 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B227F91B52DE3C00859A30 /* FontAwesome.swift */; };
+		31B227FE1B52EBD200859A30 /* Uber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B227FD1B52EBD200859A30 /* Uber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +32,57 @@
 			remoteGlobalIDString = 3146CA891B51ACD500A03CD6;
 			remoteInfo = OutsideHacksApp;
 		};
+		31B227D31B52BA4800859A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31B227CD1B52BA4700859A30 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE209471942772800736F1A;
+			remoteInfo = OAuth2;
+		};
+		31B227D51B52BA4800859A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31B227CD1B52BA4700859A30 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEDB8624193FAAE500C4EEA1;
+			remoteInfo = OAuth2iOS;
+		};
+		31B227D71B52BA4800859A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31B227CD1B52BA4700859A30 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE209A219427DFE00736F1A;
+			remoteInfo = OAuth2Tests;
+		};
+		31B227F01B52C26100859A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31B227CD1B52BA4700859A30 /* OAuth2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEE209461942772800736F1A;
+			remoteInfo = OAuth2;
+		};
+		31B227F41B52C28200859A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31B227CD1B52BA4700859A30 /* OAuth2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEDB8623193FAAE500C4EEA1;
+			remoteInfo = OAuth2iOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		31B227EC1B52BC0600859A30 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				31B227F61B52C28C00859A30 /* OAuth2.framework in Embed Frameworks */,
+				31B227F31B52C27700859A30 /* OAuth2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3146CA8A1B51ACD500A03CD6 /* OutsideHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutsideHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +97,11 @@
 		3146CAA51B51ACD500A03CD6 /* OutsideHacksAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsideHacksAppTests.swift; sourceTree = "<group>"; };
 		3146CAAF1B51B28900A03CD6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		31B227CB1B52159500859A30 /* UberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberController.swift; sourceTree = "<group>"; };
+		31B227CD1B52BA4700859A30 /* OAuth2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2.xcodeproj; path = OAuth2/OAuth2.xcodeproj; sourceTree = SOURCE_ROOT; };
+		31B227F71B52DE3C00859A30 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		31B227F81B52DE3C00859A30 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		31B227F91B52DE3C00859A30 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
+		31B227FD1B52EBD200859A30 /* Uber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B227F21B52C26B00859A30 /* OAuth2.framework in Frameworks */,
 				3146CAB01B51B28900A03CD6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,7 +149,12 @@
 				3146CA8F1B51ACD500A03CD6 /* AppDelegate.swift */,
 				3146CA911B51ACD500A03CD6 /* ViewController.swift */,
 				3146CA931B51ACD500A03CD6 /* Main.storyboard */,
+				31B227F71B52DE3C00859A30 /* Enum.swift */,
+				31B227F81B52DE3C00859A30 /* FontAwesome.otf */,
+				31B227F91B52DE3C00859A30 /* FontAwesome.swift */,
 				31B227CB1B52159500859A30 /* UberController.swift */,
+				31B227FD1B52EBD200859A30 /* Uber.swift */,
+				31B227CD1B52BA4700859A30 /* OAuth2.xcodeproj */,
 				3146CA961B51ACD500A03CD6 /* Images.xcassets */,
 				3146CA981B51ACD500A03CD6 /* LaunchScreen.xib */,
 				3146CA8D1B51ACD500A03CD6 /* Supporting Files */,
@@ -119,6 +187,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		31B227CE1B52BA4700859A30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31B227D41B52BA4800859A30 /* OAuth2.framework */,
+				31B227D61B52BA4800859A30 /* OAuth2.framework */,
+				31B227D81B52BA4800859A30 /* OAuth2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,10 +207,13 @@
 				3146CA861B51ACD500A03CD6 /* Sources */,
 				3146CA871B51ACD500A03CD6 /* Frameworks */,
 				3146CA881B51ACD500A03CD6 /* Resources */,
+				31B227EC1B52BC0600859A30 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				31B227F51B52C28200859A30 /* PBXTargetDependency */,
+				31B227F11B52C26100859A30 /* PBXTargetDependency */,
 			);
 			name = OutsideHacksApp;
 			productName = OutsideHacksApp;
@@ -191,6 +272,12 @@
 			mainGroup = 3146CA811B51ACD500A03CD6;
 			productRefGroup = 3146CA8B1B51ACD500A03CD6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 31B227CE1B52BA4700859A30 /* Products */;
+					ProjectRef = 31B227CD1B52BA4700859A30 /* OAuth2.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3146CA891B51ACD500A03CD6 /* OutsideHacksApp */,
@@ -199,6 +286,30 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		31B227D41B52BA4800859A30 /* OAuth2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2.framework;
+			remoteRef = 31B227D31B52BA4800859A30 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		31B227D61B52BA4800859A30 /* OAuth2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2.framework;
+			remoteRef = 31B227D51B52BA4800859A30 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		31B227D81B52BA4800859A30 /* OAuth2Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuth2Tests.xctest;
+			remoteRef = 31B227D71B52BA4800859A30 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		3146CA881B51ACD500A03CD6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -206,6 +317,7 @@
 			files = (
 				3146CA951B51ACD500A03CD6 /* Main.storyboard in Resources */,
 				3146CA9A1B51ACD500A03CD6 /* LaunchScreen.xib in Resources */,
+				31B227FB1B52DE3C00859A30 /* FontAwesome.otf in Resources */,
 				3146CA971B51ACD500A03CD6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,8 +336,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B227FC1B52DE3C00859A30 /* FontAwesome.swift in Sources */,
+				31B227FE1B52EBD200859A30 /* Uber.swift in Sources */,
 				3146CA921B51ACD500A03CD6 /* ViewController.swift in Sources */,
 				3146CA901B51ACD500A03CD6 /* AppDelegate.swift in Sources */,
+				31B227FA1B52DE3C00859A30 /* Enum.swift in Sources */,
 				31B227CC1B52159500859A30 /* UberController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +360,16 @@
 			isa = PBXTargetDependency;
 			target = 3146CA891B51ACD500A03CD6 /* OutsideHacksApp */;
 			targetProxy = 3146CAA01B51ACD500A03CD6 /* PBXContainerItemProxy */;
+		};
+		31B227F11B52C26100859A30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuth2;
+			targetProxy = 31B227F01B52C26100859A30 /* PBXContainerItemProxy */;
+		};
+		31B227F51B52C28200859A30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuth2iOS;
+			targetProxy = 31B227F41B52C28200859A30 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

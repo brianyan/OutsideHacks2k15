@@ -17,6 +17,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var centeredFirst = false
     @IBOutlet weak var MKView: MKMapView!
     @IBOutlet weak var Button1: UIButton!
+    @IBOutlet weak var CenterPin: UIButton!
+    @IBOutlet weak var CenterYou: UIButton!
 
     
     let locationManager = CLLocationManager()
@@ -29,6 +31,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        CenterYou.titleLabel?.font = UIFont.fontAwesomeOfSize(30)
+        CenterYou.setTitle(String.fontAwesomeIconWithName(.LocationArrow), forState: .Normal)
+        CenterPin.titleLabel?.font = UIFont.fontAwesomeOfSize(30)
+        CenterPin.setTitle(String.fontAwesomeIconWithName(.ThumbTack), forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,7 +85,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             var directions = MKDirections(request: request)
             
             directions.calculateDirectionsWithCompletionHandler{(response, error) -> Void in
-
+                if response == nil{
+                    return
+                }
                 self.Distance = response.routes.first!.distance
             }
         }
