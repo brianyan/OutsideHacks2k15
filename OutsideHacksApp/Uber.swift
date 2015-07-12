@@ -84,7 +84,7 @@ class Uber {
         var sharedApp = UIApplication.sharedApplication()
         let uberProtocol = NSURL(string: "uber://")
         
-        return sharedApp.canOpenURL(uberProtocol)
+        return sharedApp.canOpenURL(uberProtocol!)
     }
     
 }

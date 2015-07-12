@@ -10,19 +10,11 @@ import Foundation
 import UIKit
 import MapKit
 import CoreLocation
-import OAuth2
 
 
 class UberController: UIViewController{
     
-    var oauth2 = OAuth2CodeGrant(settings:[
-        "client_id": "Q6Clz-da6gMYJ68LQ-kYW10R48CJs0fV",
-        "client_secret": "mtospXdKp0dyiD4h4fztNKTSInsfpGgfdvf0Qdrf",
-        "authorize_uri": "https://login.uber.com/oauth/authorize",
-        "token_uri": "wUN_PI-fsGxaAHUHlyvQtBvcOKq2g0SnTa6pk-h6",
-        "redirect_uris": ["OutsideHacksApp://oauth/callback"],
-        "keychain": false
-        ])
+
     var pickupLocation: CLLocationCoordinate2D!
     var pinLocation: CLLocationCoordinate2D!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -38,6 +30,7 @@ class UberController: UIViewController{
     @IBAction func UberRequest(sender: AnyObject) {
         var uber = Uber(pickupLocation: pickupLocation)
         uber.dropoffLocation = pinLocation
+        uber.pickupLocation = pickupLocation
         uber.deepLink()
     }
     override func didReceiveMemoryWarning() {

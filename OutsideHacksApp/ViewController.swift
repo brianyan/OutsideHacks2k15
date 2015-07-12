@@ -35,6 +35,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         CenterYou.setTitle(String.fontAwesomeIconWithName(.LocationArrow), forState: .Normal)
         CenterPin.titleLabel?.font = UIFont.fontAwesomeOfSize(30)
         CenterPin.setTitle(String.fontAwesomeIconWithName(.ThumbTack), forState: .Normal)
+        CenterPin.layer.cornerRadius = 5
+        CenterPin.layer.borderWidth = 1
+        CenterPin.layer.borderColor = UIColor.lightGrayColor().CGColor
+        CenterYou.layer.cornerRadius = 5
+        CenterYou.layer.borderWidth = 1
+        CenterYou.layer.borderColor = UIColor.lightGrayColor().CGColor
+        Button1.layer.cornerRadius = 5
+        Button1.layer.borderWidth = 1
+        Button1.layer.borderColor = UIColor.lightGrayColor().CGColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,12 +61,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
         if droppedPin{
             Button1.setTitle("Drop Pin", forState: UIControlState.Normal)
+            Button1.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
             droppedPin = false
             MKView.removeAnnotations(MKView.annotations)
             Distance = 0.0
         }
         else{
             Button1.setTitle("Clear Pin", forState: UIControlState.Normal)
+            Button1.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+            droppedPin = true
             droppedPin = true
             pointAnnotation.coordinate = MKView.userLocation.location.coordinate
             pointAnnotation.title = "Your Car"
