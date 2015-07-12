@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
-    var myCount = true
+    var droppedPin = false
     @IBOutlet weak var MKView: MKMapView!
     @IBOutlet weak var Button1: UIButton!
     
@@ -37,13 +37,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     @IBAction func DropPin(sender: AnyObject) {
-        if myCount{
+        if droppedPin{
             Button1.setTitle("Clear Pin", forState: UIControlState.Normal)
-            myCount = false
+            droppedPin = false
+            MKView.removeAnnotations(MKView.annotations)
         }
         else{
             Button1.setTitle("Drop Pin", forState: UIControlState.Normal)
-            myCount = true
+            droppedPin = true
+            var pointAnnotation:MKPointAnnotation = MKPointAnnotation()
+            pointAnnotation.coordinate = MKView.userLocation.location.coordinate
+            pointAnnotation.title = "Your car"
+            MKView.addAnnotation(pointAnnotation)
         }
     }
     

@@ -20,9 +20,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zae-oz-bZk">
-                                <rect key="frame" x="282" y="550" width="37" height="30"/>
+                                <rect key="frame" x="270" y="550" width="60" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Clear">
+                                <state key="normal" title="Drop Pin">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -32,12 +32,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2wK-QN-29J"/>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Ef-NJ-da6"/>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="centerX" secondItem="Zae-oz-bZk" secondAttribute="centerX" id="BJD-pe-92r"/>
-                            <constraint firstAttribute="bottom" secondItem="Zae-oz-bZk" secondAttribute="bottom" constant="20" symbolic="YES" id="D4E-RX-jBo"/>
-                            <constraint firstAttribute="trailing" secondItem="rgs-vq-WCw" secondAttribute="trailing" id="ZCj-BM-Var"/>
-                            <constraint firstItem="rgs-vq-WCw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="rcg-O9-UL9"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8m5-UG-G9G"/>
+                            <constraint firstAttribute="bottom" secondItem="Zae-oz-bZk" secondAttribute="bottom" constant="20" symbolic="YES" id="BsJ-8W-hyP"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HLZ-ZV-rd1"/>
+                            <constraint firstItem="rgs-vq-WCw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Q3z-7m-sEi"/>
+                            <constraint firstItem="Zae-oz-bZk" firstAttribute="centerX" secondItem="rgs-vq-WCw" secondAttribute="centerX" id="U5l-rm-0N6"/>
+                            <constraint firstAttribute="trailing" secondItem="rgs-vq-WCw" secondAttribute="trailing" id="ZkJ-Vp-B90"/>
                         </constraints>
                     </view>
                     <connections>
