@@ -1,21 +1,12 @@
-# OutsideHacks2k15
-Repository for OutsideHacks2015
-<h1> #TODO LIST </h1>
-1) draw the map and drop the pin
+<h1> FindYourCar </h1>
+ Created at OutsideHacks Hackathon at the Weebly Office in San Francisco July 11th-July12th
+<h2> What does this app do? </h2>
+- This iOS app intends you save the location of your parked vehicle so you don't forget where you parked
+- It lets you see where your current location is
+- Lets you have the option to request an Uber to your parked vehicle.
+<h3> App uses </h3>
+- MapKit framework 
+- Uber API (deep linked)
+- Swift Programming language
 
-2) calculate distance between pin and where you currently are
-
-
-3) offer ability to Uber
-
-
-4) 
-
-<h2> Important links to read about </h2>
-- http://news.mlh.io/your-first-hackathon-10-07-2013
-- https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1
-- http://www.outsidehacks.com/apis.html
-- #MapKit API ( for displaying maps/dropping locations)
-- http://www.raywenderlich.com/90971/introduction-mapkit-swift-tutorial 
-
-<h3> 
+<h4> Enjoy </h4>
